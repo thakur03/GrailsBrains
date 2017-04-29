@@ -24,7 +24,7 @@ public class PurchaseOrderAction extends Action {
         PurchaseOrderForm purchaseOrderForm = (PurchaseOrderForm) form;
         PurchaseOrder purchaseOrder = new PurchaseOrder();
         POManage manage = new POManage();
-       int n = manage.createPurchaseOrder(purchaseOrder);
+        int n = manage.createPurchaseOrder(purchaseOrder);
         return  mapping.findForward("purchase_order_list");
     }
 }

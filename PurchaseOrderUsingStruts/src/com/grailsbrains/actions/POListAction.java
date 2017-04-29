@@ -31,8 +31,6 @@ private static String SUCCESS="success";
 
         Byte shipTogether = (request.getParameter("shiptogether") == null
                 || request.getParameter("shiptogether").equals("null")) ? (byte) 0 : (byte) 1;
-        System.out.println("check: " + shipTogether);
-        System.out.println("check: " + poForm.getPonumber() );
 
         String poNumber= poForm.getPonumber();
         String status = poForm.getStatus();
@@ -48,7 +46,6 @@ private static String SUCCESS="success";
         String originCity = poForm.getOrigincity();
         String destinationCity = poForm.getDestinationcity();
 
-        //System.out.println("transresp : " + request.getParameter("transresp"));
         Integer transResp = Integer.parseInt(poForm.getTransresp());
         Integer incoTerms = Integer.parseInt(poForm.getIncoterms());
         Integer designatedMode = Integer.parseInt(poForm.getDesignatedmode());
@@ -72,9 +69,7 @@ private static String SUCCESS="success";
             deliveryStart = dateFormat.parse(poForm.getDeliverystart());
 
             deliveryEnd = dateFormat.parse(poForm.getDeliveryend());
-            System.out.println("end date " + deliveryEnd);
-            System.out.print("po number :" + poNumber);
-
+            
         if (poNumber == null) {
             return   mapping.findForward("fail");
         } else {
@@ -140,21 +135,11 @@ private static String SUCCESS="success";
             purchaseOrder.setDesignatedMode(mode);
             purchaseOrder.setCarrier(carrierObj);
 
-            System.out.println("********"+purchaseOrder.toString());
             poManage.createPurchaseOrder(purchaseOrder);
-            System.out.print("order is created");
-            
             List<PurchaseOrderForm> orderList = poManage.viewPurchaseOrder();
-            System.out.println("view order");
-
-
+            
             request.setAttribute("orderList", orderList);
-            System.out.println("session created");
-
             return  mapping.findForward(SUCCESS);
-
-
-        }
-
+	}
     }
 }
