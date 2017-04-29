@@ -1,0 +1,46 @@
+@CHARSET "ISO-8859-1";
+
+.loginform {
+	margin: 150px 250px;
+	border-radius: 2em;
+	background-color: #4d94ff;
+	height: 350px;
+	width: 600px
+}
+
+.textcolour {
+	color: white;
+}
+
+#login {
+	border: 1px;
+	border-radius: 2em;
+	background-color: #1a53ff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+.navbar-custom {
+	color: #FFFFFF;
+	background-color: #66b3ff;
+	min-height:70px;
+	margin-bottom:0px;
+}
+
+.bg-grey {
+	background-color: gray;
+}
+
+.para{
+	 margin-top:0px;  
+	 margin-left:20px;  
+	 font-size: 25px;
+}
+
+input[type=text]{
+	margin-bottom:15px;
+}
+
+.textboxsize{
+	width:300px;
+}
