@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="demo_db@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1" name="demo_db">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="ecommerce_db"/>
+    <schema id="4" parent="1" name="emp_data"/>
+    <schema id="5" parent="1" name="ems_db"/>
+    <schema id="6" parent="1" name="hibernate_db"/>
+    <schema id="7" parent="1" name="information_schema"/>
+    <schema id="8" parent="1" name="jpadb"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="new_schema"/>
+    <schema id="11" parent="1" name="performance_schema"/>
+    <schema id="12" parent="1" name="purchase"/>
+    <schema id="13" parent="1" name="purchase_order"/>
+    <schema id="14" parent="1" name="shoppingdb"/>
+    <schema id="15" parent="1" name="sys"/>
+    <schema id="16" parent="1" name="test"/>
+    <schema id="17" parent="1" name="test2"/>
+    <schema id="18" parent="1" name="testdb"/>
+    <schema id="19" parent="1" name="test_ems_db"/>
+    <schema id="20" parent="1" name="test_jpa"/>
+    <table id="21" parent="2" name="address"/>
+    <table id="22" parent="2" name="destination_address"/>
+    <table id="23" parent="2" name="origin_address"/>
+    <table id="24" parent="2" name="purchaseorder"/>
+    <table id="25" parent="2" name="purchaseorder_destination_address"/>
+    <table id="26" parent="2" name="purchaseorder_origin_address"/>
+    <column id="27" parent="21" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="28" parent="21" name="address">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="29" parent="21" name="city">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="30" parent="21" name="country">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="31" parent="21" name="refererName">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="32" parent="21" name="state">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="33" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="34" parent="22" name="deliveryEnd">
+      <Position>1</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="35" parent="22" name="deliveryStart">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="36" parent="22" name="ID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="37" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="38" parent="23" name="pickupEnd">
+      <Position>1</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="39" parent="23" name="pickupStart">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="40" parent="23" name="ID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="41" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="42" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="43" parent="24" name="billTo">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="44" parent="24" name="carrier">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="45" parent="24" name="designatedMode">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="46" parent="24" name="dueDate">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="47" parent="24" name="incoTerms">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="48" parent="24" name="issueDate">
+      <Position>7</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="49" parent="24" name="poNumber">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="50" parent="24" name="priority">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="51" parent="24" name="seller_vendor">
+      <Position>10</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="52" parent="24" name="shipTogether">
+      <Position>11</Position>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="53" parent="24" name="status">
+      <Position>12</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="54" parent="24" name="transResp">
+      <Position>13</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="55" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="56" parent="25" name="PurchaseOrder_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="25" name="destinationAddresses_ID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="58" parent="25" name="FKp37kb4jpubuki22dn21bg6pd">
+      <ColNames>PurchaseOrder_id</ColNames>
+    </index>
+    <index id="59" parent="25" name="UK_cnoi765qm47s4tid5ftlaql79">
+      <ColNames>destinationAddresses_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="60" parent="25" name="UK_cnoi765qm47s4tid5ftlaql79">
+      <ColNames>destinationAddresses_ID</ColNames>
+      <UnderlyingIndexName>UK_cnoi765qm47s4tid5ftlaql79</UnderlyingIndexName>
+    </key>
+    <column id="61" parent="26" name="PurchaseOrder_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="26" name="originAddresses_ID">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="63" parent="26" name="FK3m4jvaxjveyevquygtwubhrk3">
+      <ColNames>PurchaseOrder_id</ColNames>
+    </index>
+    <index id="64" parent="26" name="UK_iyrgrvdltjq0nwe872jkf3xtu">
+      <ColNames>originAddresses_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="65" parent="26" name="UK_iyrgrvdltjq0nwe872jkf3xtu">
+      <ColNames>originAddresses_ID</ColNames>
+      <UnderlyingIndexName>UK_iyrgrvdltjq0nwe872jkf3xtu</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>

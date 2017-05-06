@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+    <form-beans>
+        <form-bean name="loginfrm" type="com.grailsbrains.forms.Loginfrm"/>
+        <form-bean name="POform" type="com.grailsbrains.forms.PurchaseOrderForm"/>
+        <form-bean name="orderlistForm" type="com.grailsbrains.forms.PurchaseOrderForm"/>
+        <!--<form-bean name="search" type="com.grailsbrains.forms.SearchForm"/>-->
+    </form-beans>
+    <action-mappings>
+    <action path="/login" name="loginfrm" input="/login.jsp"  type="com.grailsbrains.actions.LoginAction">
+        <forward name="purchase_order" path="/purchase_order.jsp"/>
+        <forward name="fail" path="/fail.jsp"/>
+    </action>
+    <action path="/purchase" name="POform" type="com.grailsbrains.actions.POAction" input="purchase_order.jsp">
+        <forward name="success" path="/purchase_order_list.jsp"/>
+        <forward name="fail" path="/fail.jsp"/>
+    </action>
+    </action-mappings>
+</struts-config>
